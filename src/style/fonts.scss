@@ -1,0 +1,47 @@
+@use './variables' as *;
+
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: InstrumentSans;
+    src: url(../fonts/InstrumentSans-Bold.ttf);
+    font-weight: bold;
+}
+
+h1 {
+    font-family: $secondaryFont;
+    font-size: $h1FontSize;
+    font-weight: $h1FontWeight;
+    line-height: $h1LineHeight;
+
+    span {
+        white-space: nowrap;
+
+        img {
+            display: inline-block;
+            margin-left: 8px;
+        }
+
+        &:last-child {
+            color: $primaryColor;
+            margin-left: 96px;
+        }
+    }
+}
+
+h2 {
+    font-family: $secondaryFont;
+    font-size: $h2FontSize;
+    font-weight: $h2FontWeight;
+    color: $primaryColor;
+}

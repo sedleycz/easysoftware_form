@@ -1,0 +1,42 @@
+@use '../variables' as *;
+
+.card {
+    border-radius: $borderRadius;
+    background-color: $lightColor;
+    padding: 16px;
+
+    &.primary {
+        background-color: $primaryColor;
+        color: $lightColor;
+
+        .toc-item {
+            padding: 8px;
+            border-radius: $borderRadius;
+            font-weight: bold;
+            transition: $basicTransition;
+
+            span {
+                background-color: $blackColor;
+                color: $lightColor;
+                border-radius: 50%;
+                padding: 4px;
+                width: 24px;
+                line-height: 1;
+            }
+
+            &.active {
+                background-color: $lightColor;
+                color: $primaryColor;
+
+                span {
+                    background-color: $primaryColor;
+                }
+            }
+
+            &:hover:not(.active) {
+                background-color: $black20Color;
+                color: $lightColor;
+            }
+        }
+    }
+}

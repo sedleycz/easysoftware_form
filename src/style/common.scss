@@ -1,0 +1,18 @@
+@use './variables' as *;
+
+html {
+    scroll-behavior: smooth;
+
+    body {
+        background-color: $surfaceColor;
+        color: $blackColor;
+        font-family: $primaryFont;
+        font-size: $basicFontSize;
+        font-weight: $basicFontWeight;
+        padding: 40px;
+    
+        @media (max-width: 767px) {
+            padding: 16px;
+        }
+    }
+}

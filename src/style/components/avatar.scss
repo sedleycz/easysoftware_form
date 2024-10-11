@@ -1,0 +1,14 @@
+@use '../variables' as *;
+@use '../mixins' as m;
+
+.avatar {
+    @include m.border-radius(100%);
+    width: $avatarSize;
+    height: $avatarSize;
+    overflow: hidden;
+    background-color: $surfaceColor;
+
+    img {
+        width: 100%;
+    }
+}

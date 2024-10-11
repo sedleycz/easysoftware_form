@@ -1,0 +1,59 @@
+@use '../variables' as *;
+
+#mobile-menu {
+    padding: 16px 24px;
+
+    .items {
+        visibility: hidden;
+        position: fixed;
+        transition: .2s;
+        width: 100%;
+        height: 100dvh;
+        top: 0;
+        right: -100%;
+        background-color: $primaryColor;
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+        gap: 24px;
+        z-index: 100;
+
+        .close-menu {
+            display: inline-block;
+            width: fit-content;
+            align-self: flex-end;
+        }
+
+        a {
+            font-size: $basicFontSize;
+            font-weight: $boldFontWeight;
+            width: fit-content;
+            margin: 0;
+            align-self: center;
+            color: $lightColor;
+            border-bottom: 1px solid transparent;
+            transition: $basicTransition;
+
+            &:hover {
+                border-color: $lightColor;
+            }
+        }
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    &.open {
+        .items {
+            visibility: visible;
+            right: 0;
+        }
+    }
+
+    &.portfolio {
+        .items {
+            visibility: visible;
+        }
+    }
+}

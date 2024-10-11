@@ -1,0 +1,46 @@
+@use '../variables' as *;
+@use '../mixins' as m;
+
+button {
+    &.btn {
+        padding: $buttonPadding;
+        transition: $basicTransition;
+        font-weight: $boldFontWeight;
+        @include m.border-radius($borderRadius);
+        
+        &.btn-primary {
+            background-color: $primaryColor;
+            color: $lightColor;
+
+            &:hover {
+                background-color: $blackColor;
+            }
+
+            &.outlined {
+                background-color: transparent;
+                border: 2px solid $primaryColor;
+                color: $primaryColor;
+
+                &:hover {
+                    background-color: $primaryColor;
+                    color: $lightColor;
+                }
+            }
+        }
+
+        &.menu-btn {
+            background-color: $primaryColor;
+            width: 48px;
+            height: 48px;
+            position: relative;
+            @include m.border-radius(50%);
+
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}

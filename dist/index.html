@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Uživatelské nastavení</title>
+    </head>
+    <body>
+        <div class="lg:hidden" id="mobile-menu">
+            <div class="items">
+                <div class="flex justify-end">
+                    <button type="button" class="button icon close-menu-btn my-8 me-2">
+                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.4422 0.381566C1.1493 0.0886724 0.674428 0.0886724 0.381535 0.381566C0.0886419 0.674459 0.0886419 1.14933 0.381535 1.44223L10.4894 11.5501L0.381535 21.6579C0.0886419 21.9508 0.0886419 22.4256 0.381535 22.7185C0.674428 23.0114 1.1493 23.0114 1.4422 22.7185L11.55 12.6107L21.6578 22.7185C21.9507 23.0114 22.4256 23.0114 22.7185 22.7185C23.0114 22.4256 23.0114 21.9508 22.7185 21.6579L12.6107 11.5501L22.7185 1.44223C23.0114 1.14933 23.0114 0.674459 22.7185 0.381566C22.4256 0.0886724 21.9507 0.0886724 21.6578 0.381566L11.55 10.4894L1.4422 0.381566Z" fill="white"/>
+                        </svg>                        
+                    </button>
+                </div>
+                <a class="menu-item" href="#profile-photo">Profilová fotka</a>
+                <a class="menu-item" href="#general">Obecné nastavení</a>
+                <a class="menu-item" href="#notifications">Notifikace</a>
+                <a class="menu-item" href="#others">Ostatní</a>
+            </div>
+        </div>
+        <div class="heading flex items-center pb-8">
+            <h1 class="flex-grow">
+                <span class="block">
+                    Nastavení <img class="heading-icon" src="" alt="Settings icon">
+                </span>
+                <span class="block">uživatele</span>
+            </h1>
+            <div class="menu-button lg:hidden">
+                <button type="button" class="btn btn-primary menu-btn">
+                    <svg width="25" height="17" viewBox="0 0 25 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.75C0 0.335786 0.335786 0 0.75 0H23.75C24.1642 0 24.5 0.335786 24.5 0.75C24.5 1.16421 24.1642 1.5 23.75 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75ZM0 8.14286C0 7.72864 0.335786 7.39286 0.75 7.39286H23.75C24.1642 7.39286 24.5 7.72864 24.5 8.14286C24.5 8.55707 24.1642 8.89286 23.75 8.89286H0.75C0.335786 8.89286 0 8.55707 0 8.14286ZM0.75 14.7857C0.335786 14.7857 0 15.1215 0 15.5357C0 15.9499 0.335786 16.2857 0.75 16.2857H23.75C24.1642 16.2857 24.5 15.9499 24.5 15.5357C24.5 15.1215 24.1642 14.7857 23.75 14.7857H0.75Z" fill="#F9F9F9"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="grid grid-cols-12 gap-4">
+            <div class="col-span-3 lg:block hidden lg:order-1">
+                <div class="card sticky top-4 primary flex flex-col gap-2">
+                    <a class="toc-item active flex gap-2" href="#general">
+                        <span class="inline-block text-center">1</span>
+                        Obecné nastavení
+                    </a>
+                    <a class="toc-item flex gap-2" href="#notifications">
+                        <span class="inline-block text-center">2</span>
+                        Notifikace
+                    </a>
+                    <a class="toc-item flex gap-2" href="#others">
+                        <span class="inline-block text-center">3</span>
+                        Ostatní
+                    </a>
+                </div>
+            </div>
+            <div class="col-span-12 lg:col-span-6 order-3 lg:order-2">
+                <form>
+                    <div class="flex flex-col gap-4">
+                        <section id="general" class="card flex flex-col gap-4">
+                            <div class="flex flex-col gap-5">
+                                <h2>Obecné nastavení</h2>
+                                <div class="form-input">
+                                    <label for="name">Jméno a příjmení</label>
+                                    <input type="text" id="name">
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="col-span-1">
+                                        <div class="form-input">
+                                            <label for="email">Email</label>
+                                            <input type="email" id="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1">
+                                        <div class="form-input">
+                                            <label for="phone">Telefon</label>
+                                            <input type="input" id="phone">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-input">
+                                    <label for="description">Popis uživatele</label>
+                                    <textarea id="description"></textarea>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <div class="col-span-1">
+                                        <div class="form-input select-wrapper">
+                                            <label for="language">Jazyk aplikace</label>
+                                            <select id="language">
+                                                <option selected value="cs">Česky</option>
+                                                <option value="en">Anglicky</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1">
+                                        <div class="form-input select-wrapper">
+                                            <label for="currency">Měna</label>
+                                            <select id="currency">
+                                                <option selected value="czk">Česká koruna</option>
+                                                <option value="eur">Euro</option>
+                                                <option value="usd">Dolar</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1">
+                                        <div class="form-input select-wrapper">
+                                            <label for="theme">Motiv aplikace</label>
+                                            <select id="theme">
+                                                <option selected value="czk">Výchozí</option>
+                                                <option value="eur">Černý</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="notifications" class="card flex flex-col gap-4">
+                            <div class="flex flex-col gap-6">
+                                <h2>Notifikace</h2>
+                                <div class="flex flex-wrap gap-4">
+                                    <div class="form-input switch-wrapper">
+                                        <label class="switch">
+                                            <input id="notification1" type="checkbox">
+                                            <span class="slider"></span>
+                                        </label>
+                                        <label for="notification1">Zprávy od ostatních uživatelů</label>
+                                    </div>
+                                    <div class="form-input switch-wrapper">
+                                        <label class="switch">
+                                            <input id="notification2" type="checkbox">
+                                            <span class="slider"></span>
+                                        </label>
+                                        <label for="notification2">Nové nabídky</label>
+                                    </div>
+                                    <div class="form-input switch-wrapper">
+                                        <label class="switch">
+                                            <input id="notification3" type="checkbox">
+                                            <span class="slider"></span>
+                                        </label>
+                                        <label for="notification3">Hlídací pes</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="others" class="card flex flex-col gap-4">
+                            <div class="flex flex-col gap-6">
+                                <h2>Ostatní</h2>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <div class="col-span-2">
+                                        <div class="form-input has--error">
+                                            <label for="input1">Lorem ipsum</label>
+                                            <input type="text" id="input1">
+                                            <p class="error-message">Toto pole je povinné.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-2 md:col-span-1">
+                                        <div class="form-input select-wrapper">
+                                            <label for="input2">Lorem ipsum</label>
+                                            <select id="input2">
+                                                <option selected value="lorem">Lorem</option>
+                                                <option value="ipsum">Ipsum</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <div class="col-span-2 md:col-span-1">
+                                        <div class="form-input">
+                                            <label for="datepicker1">Lorem ipsum</label>
+                                            <div class="datepicker-wrapper relative">
+                                                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                                                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                                                    </svg>
+                                                </div>
+                                                <input datepicker id="datepicker1" type="text" placeholder="Vyberte datum">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-2">
+                                        <div class="form-input">
+                                            <label for="input3">Lorem ipsum</label>
+                                            <input type="text" id="input3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="col-span-1">
+                                        <div class="form-input">
+                                            <label for="input4">Lorem ipsum</label>
+                                            <input type="text" id="input4">
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1">
+                                        <div class="form-input">
+                                            <label for="input5">Lorem ipsum</label>
+                                            <input type="text" id="input5">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="col-span-1">
+                                        <div class="form-input">
+                                            <label for="input6">Lorem ipsum</label>
+                                            <input type="text" id="input6">
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1">
+                                        <div class="form-input">
+                                            <label for="input7">Lorem ipsum</label>
+                                            <input type="text" id="input7">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="col-span-1">
+                                        <div class="form-input">
+                                            <label for="input8">Lorem ipsum</label>
+                                            <input type="text" id="input8">
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1">
+                                        <div class="form-input">
+                                            <label for="input9">Lorem ipsum</label>
+                                            <input type="text" id="input9">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="flex justify-end pt-4">
+                        <button class="btn btn-primary">Potrvdit změny</button>
+                    </div>
+                </form>
+            </div>
+            <div id="profile-photo" class="col-span-12 lg:col-span-3 order-1 lg:order-3">
+                <div class="card flex flex-col gap-4">
+                    <h2>Profilová fotka</h2>
+                    <div class="flex flex-wrap items-center gap-4">
+                        <div class="avatar">
+                            <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50" alt="Profile photo">
+                        </div>
+                        <div>
+                            <button class="btn btn-primary outlined">Nahrát fotku</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="bundle.js"></script>
+    </body>
+</html>
